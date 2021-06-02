@@ -10,7 +10,7 @@ export function activate(context: vscode.ExtensionContext) {
     const disposable = vscode.commands.registerTextEditorCommand(
         "extension.embraceLocalization",
         (textEditor, edit) => {
-            doSurround(textEditor, edit, "{{ __(", ") }}");
+            doSurround(textEditor, edit, "{{ __('", "') }}");
         }
     );
 
@@ -34,6 +34,7 @@ function doSurround(
             textEditor.selections.forEach((selection) => {
                 const adjust =
                     selection.start.line == selection.end.line ? 1 : 0;
+                console.log(selection);
                 editBuilder.insert(selection.start, insBefore);
                 editBuilder.insert(selection.end, insAfter);
                 newSelections.push(

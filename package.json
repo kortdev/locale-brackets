@@ -2,22 +2,26 @@
     "name": "mm-laravel-locale-brackets",
     "displayName": "Laravel Locale Brackets",
     "description": "Add localization brackets to selected string ",
-    "version": "0.0.1",
+    "version": "0.0.4",
     "publisher": "marshmallow",
     "engines": {
         "vscode": "^1.56.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kortdev/locale-brackets"
     },
     "categories": [
         "Other"
     ],
     "activationEvents": [
-        "onCommand:mm-laravel-locale-brackets.embraceLocalization"
+        "onCommand:extension.embraceLocalization"
     ],
     "main": "./dist/extension.js",
     "contributes": {
         "commands": [
             {
-                "command": "mm-laravel-locale-brackets.embraceLocalization",
+                "command": "extension.embraceLocalization",
                 "title": "Embrace: Surround With Localization brackets"
             }
         ]

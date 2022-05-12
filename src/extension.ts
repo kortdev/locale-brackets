@@ -34,9 +34,18 @@ function doSurround(
             textEditor.selections.forEach((selection) => {
                 const adjust =
                     selection.start.line == selection.end.line ? 1 : 0;
-                console.log(selection);
+
+                let text = document.getText(selection);
+                let orgText = text;
+
+                text = text.replace(/\s/g, "");
+                text = text.replace("'", "\\'");
+
+                editBuilder.replace(selection, text);
+
                 editBuilder.insert(selection.start, insBefore);
                 editBuilder.insert(selection.end, insAfter);
+
                 newSelections.push(
                     new vscode.Selection(
                         selection.start.translate(0, 1),

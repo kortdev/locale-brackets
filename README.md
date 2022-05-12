@@ -10,10 +10,11 @@ Inserts open and close notations on both ends of the current selection(s).
 
 The following commands have been implemented:
 
-| **Command**                       | **Description**               |  **Notation**   | **Suggested Key** |
-| --------------------------------- | ----------------------------- | :-------------: | :---------------: |
-| **extension.embraceLocalization** | Surround with Locale Brackets | `{{ __(' ') }}` |  `cmd+k, cmd+l`   |
-|                                   |                               |
+| **Command**                          | **Description**               |  **Notation**   | **Suggested Key** |
+| ------------------------------------ | ----------------------------- | :-------------: | :---------------: |
+| **extension.embraceLocalization**    | Surround with Locale Brackets | `{{ __(' ') }}` |  `cmd+k, cmd+l`   |
+| **extension.embraceLocalizationPhp** | Surround with Locale Brackets |    `__(' ')`    |  `cmd+k, cmd+k`   |
+|                                      |                               |
 
 ---
 
@@ -32,6 +33,11 @@ To configure your own keyboard shortcuts, open the Command Palette with `ctrl+sh
         {
             "key": "cmd+k cmd+l",
             "command": "extension.embraceLocalization",
+            "when": "editorHasSelection && editorTextFocus"
+        },
+        {
+            "key": "cmd+k cmd+k",
+            "command": "extension.embraceLocalizationPhp",
             "when": "editorHasSelection && editorTextFocus"
         }
 

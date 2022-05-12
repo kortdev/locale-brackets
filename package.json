@@ -15,14 +15,19 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.embraceLocalization"
+        "onCommand:extension.embraceLocalization",
+        "onCommand:extension.embraceLocalizationPhp"
     ],
     "main": "./dist/extension.js",
     "contributes": {
         "commands": [
             {
                 "command": "extension.embraceLocalization",
-                "title": "Embrace: Surround With Localization brackets"
+                "title": "Embrace: Surround Text With Localization brackets for Blade"
+            },
+            {
+                "command": "extension.embraceLocalizationPhp",
+                "title": "Embrace: Surround Text With Localization brackets for non Blade files"
             }
         ]
     },

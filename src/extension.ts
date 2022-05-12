@@ -14,7 +14,15 @@ export function activate(context: vscode.ExtensionContext) {
         }
     );
 
+    const disposable1 = vscode.commands.registerTextEditorCommand(
+        "extension.embraceLocalizationPhp",
+        (textEditor, edit) => {
+            doSurround(textEditor, edit, "__('", "')");
+        }
+    );
+
     context.subscriptions.push(disposable);
+    context.subscriptions.push(disposable1);
 }
 
 // this method is called when your extension is deactivated

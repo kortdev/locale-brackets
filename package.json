@@ -2,7 +2,7 @@
     "name": "mm-laravel-locale-brackets",
     "displayName": "Laravel Locale Brackets",
     "description": "Add localization brackets to selected string ",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "publisher": "marshmallow",
     "engines": {
         "vscode": "^1.56.0"

@@ -13,7 +13,7 @@ The following commands have been implemented:
 | **Command**                          | **Description**               |  **Notation**   | **Suggested Key** |
 | ------------------------------------ | ----------------------------- | :-------------: | :---------------: |
 | **extension.embraceLocalization**    | Surround with Locale Brackets | `{{ __(' ') }}` |  `cmd+k, cmd+l`   |
-| **extension.embraceLocalizationPhp** | Surround with Locale Brackets |    `__(' ')`    |  `cmd+k, cmd+k`   |
+| **extension.embraceLocalizationPhp** | Surround with Locale Brackets |    `__(' ')`    |  `cmd+k, cmd+p`   |
 |                                      |                               |
 
 ---
@@ -36,7 +36,7 @@ To configure your own keyboard shortcuts, open the Command Palette with `ctrl+sh
             "when": "editorHasSelection && editorTextFocus"
         },
         {
-            "key": "cmd+k cmd+k",
+            "key": "cmd+k cmd+p",
             "command": "extension.embraceLocalizationPhp",
             "when": "editorHasSelection && editorTextFocus"
         }
